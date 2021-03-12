@@ -1,23 +1,39 @@
-#include <stdio.h>
-
-int main() {
- int marks[4][3],i,j,maxmarks;
- for(i=0;i<4;i++)
- {
-    printf("enter the marks obtained by student %d",i);
-    for(j=0;j<3;j++)
-    {printf("\n marks[%d][%d]=",i,j);
-    scanf("%d",&marks[i][j]);
-    }
- }
-  for(j=0;j<3;j++)
-  {
-      maxmarks=marks[0][j];
-      for(i=0;i<4;i++)
-  {if (marks[i][j]>maxmarks)
-  {maxmarks=marks[i][j];}
-  }
-  printf("the highest marks in the subject is %d=%d",j,maxmarks);
-  }
-    return 0;
+#include<stdio.h>
+void main()
+{
+ struct student
+{
+   int rlno;
+   char name[10];
+   char section[5];
+   char course[20];
+   float fees;
+   int result;
+}stud1,stud2;
+scanf("%d",&stud1.rlno);
+scanf("%s",stud1.name);
+scanf("%s",stud1.section);
+scanf("%f",&stud1.fees);
+scanf("%d",&stud1.result);
+printf("Enter the details of the second student");
+scanf("%d",&stud2.rlno);
+scanf("%s",stud2.name);
+scanf("%s",stud2.section);
+scanf("%f",&stud2.fees);
+scanf("%d",&stud2.result);
+if(stud1.result>stud2.result)
+{
+printf("%d",&stud1.rlno);
+printf("%s",stud1.name);
+printf("%s",stud1.section);
+printf("%f",&stud1.fees);
+printf("%d",&stud1.result);
 }
+else
+{
+printf("%d",&stud2.rlno);
+printf("%s",stud2.name);
+printf("%s",stud2.section);
+printf("%f",&stud2.fees);
+printf("%d",&stud2.result);
+}}
